@@ -13,3 +13,15 @@ def graph_spectrogram(wav_file):
     pylab.savefig('spectrogram - %s' % os.path.splitext(wav_file)[0])
 
 
+def get_wav_info(wav_file):
+    wav = wave.open(wav_file, 'r')
+    frames = wav.readframes(-1)
+    sound_info = pylab.fromstring(frames, 'Int16')
+    frame_rate = wav.getframerate()
+    wav.close()
+    return sound_info, frame_rate
+
+
+if __name__ == '__main__':
+    wav_file = 'Deadmau5 - Superliminal.wav'
+    graph_spectrogram('wav_filename')  #it must be in the same folder of the program
