@@ -1,0 +1,3 @@
+ffmpeg -ss 10 -t 30 -i /home/midhun/Documents/Project/pgms/inp/*.mp3 -c copy /home/midhun/Documents/Project/pgms/out/out%04d.mp3
+
+ffmpeg -i /home/midhun/Documents/Project/pgms/out/*.mp3  -f segment -segment_time 0.1 -c copy /home/midhun/Documents/Project/pgms/out/segment/out%06d.mp3
