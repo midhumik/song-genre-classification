@@ -19,6 +19,7 @@ for file in /home/midhun/Documents/Project/pgms/out/cropped/*.mp3
 
 done
 
+
 #for file in /home/midhun/Documents/Project/pgms/out/segment/"$name"/*.mp3
 #do 
   #librosa3.py
